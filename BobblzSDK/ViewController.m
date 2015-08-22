@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "TestModel.h"
-#import "BZJSONDataProcessor.h"
+#import "BZTestObject.h"
+#import "BZDataProcessor.h"
 
 @interface ViewController ()
 
@@ -16,15 +16,10 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
-    TestModel *testModel = [[TestModel alloc] init];
-    
-    BZJSONDataProcessor *json = [[BZJSONDataProcessor alloc] init];
-    [json encode: testModel];
-    
+    BZJSONProcessor *proce = [BZDataProcessor processorWithType:BZJSONDataProcessor];
+    [proce encode: [[BZTestObject alloc] init]];
 }
 
 - (void)didReceiveMemoryWarning {
