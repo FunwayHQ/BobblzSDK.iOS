@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B42902FF-2D00-4660-A399-913197DA3537</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BobblzSDK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5C3801E3DD9E5A3F8540F3C2D7E6D7ED3420F2BC</key>
+		<string>https://github.com/FunwayHQ/BobblzSDK.iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BobblzSDK.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5C3801E3DD9E5A3F8540F3C2D7E6D7ED3420F2BC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/FunwayHQ/BobblzSDK.iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5C3801E3DD9E5A3F8540F3C2D7E6D7ED3420F2BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5C3801E3DD9E5A3F8540F3C2D7E6D7ED3420F2BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BobblzSDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>

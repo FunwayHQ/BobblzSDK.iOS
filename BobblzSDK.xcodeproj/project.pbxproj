@@ -15,6 +15,8 @@
 		55B10D051A81728F00AA3684 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B10D031A81728F00AA3684 /* LaunchScreen.xib */; };
 		55B10D111A81728F00AA3684 /* BobblzSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B10D101A81728F00AA3684 /* BobblzSDKTests.m */; };
 		FEDD227D1B89024C00DAE2CF /* NSObject+Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDD227C1B89024C00DAE2CF /* NSObject+Serializer.m */; };
+		FEDD22851B890C7300DAE2CF /* BZTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDD22841B890C7300DAE2CF /* BZTransport.m */; };
+		FEDD22881B890CD700DAE2CF /* BZPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDD22871B890CD700DAE2CF /* BZPacket.m */; };
 		FEFC26971B88F96B00869D22 /* BZDataProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFC26961B88F96B00869D22 /* BZDataProcessor.m */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,11 @@
 		B7B6D2FABA7FE61A911D5EB9 /* Pods-BobblzSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobblzSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BobblzSDK/Pods-BobblzSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		FEDD227B1B89024C00DAE2CF /* NSObject+Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Serializer.h"; sourceTree = "<group>"; };
 		FEDD227C1B89024C00DAE2CF /* NSObject+Serializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Serializer.m"; sourceTree = "<group>"; };
+		FEDD22811B890BFB00DAE2CF /* BZMethodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZMethodType.h; sourceTree = "<group>"; };
+		FEDD22831B890C7300DAE2CF /* BZTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZTransport.h; sourceTree = "<group>"; };
+		FEDD22841B890C7300DAE2CF /* BZTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZTransport.m; sourceTree = "<group>"; };
+		FEDD22861B890CD700DAE2CF /* BZPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZPacket.h; sourceTree = "<group>"; };
+		FEDD22871B890CD700DAE2CF /* BZPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZPacket.m; sourceTree = "<group>"; };
 		FEFC26951B88F96B00869D22 /* BZDataProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDataProcessor.h; sourceTree = "<group>"; };
 		FEFC26961B88F96B00869D22 /* BZDataProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDataProcessor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,15 +100,12 @@
 		55B10CF31A81728F00AA3684 /* BobblzSDK */ = {
 			isa = PBXGroup;
 			children = (
+				FEDD22821B890C5500DAE2CF /* Transports */,
 				FEDD227A1B89023200DAE2CF /* Categories */,
 				FEFC26941B88F95500869D22 /* Processors */,
-				55B10CF81A81728F00AA3684 /* AppDelegate.h */,
-				55B10CF91A81728F00AA3684 /* AppDelegate.m */,
-				55B10CFB1A81728F00AA3684 /* ViewController.h */,
-				55B10CFC1A81728F00AA3684 /* ViewController.m */,
-				55B10CFE1A81728F00AA3684 /* Main.storyboard */,
-				55B10D011A81728F00AA3684 /* Images.xcassets */,
-				55B10D031A81728F00AA3684 /* LaunchScreen.xib */,
+				FEDD22811B890BFB00DAE2CF /* BZMethodType.h */,
+				FEDD22861B890CD700DAE2CF /* BZPacket.h */,
+				FEDD22871B890CD700DAE2CF /* BZPacket.m */,
 				55B10CF41A81728F00AA3684 /* Supporting Files */,
 			);
 			path = BobblzSDK;
@@ -112,6 +116,13 @@
 			children = (
 				55B10CF51A81728F00AA3684 /* Info.plist */,
 				55B10CF61A81728F00AA3684 /* main.m */,
+				55B10CF81A81728F00AA3684 /* AppDelegate.h */,
+				55B10CF91A81728F00AA3684 /* AppDelegate.m */,
+				55B10CFB1A81728F00AA3684 /* ViewController.h */,
+				55B10CFC1A81728F00AA3684 /* ViewController.m */,
+				55B10CFE1A81728F00AA3684 /* Main.storyboard */,
+				55B10D011A81728F00AA3684 /* Images.xcassets */,
+				55B10D031A81728F00AA3684 /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -149,6 +160,15 @@
 				FEDD227C1B89024C00DAE2CF /* NSObject+Serializer.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		FEDD22821B890C5500DAE2CF /* Transports */ = {
+			isa = PBXGroup;
+			children = (
+				FEDD22831B890C7300DAE2CF /* BZTransport.h */,
+				FEDD22841B890C7300DAE2CF /* BZTransport.m */,
+			);
+			name = Transports;
 			sourceTree = "<group>";
 		};
 		FEFC26941B88F95500869D22 /* Processors */ = {
@@ -262,7 +282,9 @@
 				FEFC26971B88F96B00869D22 /* BZDataProcessor.m in Sources */,
 				55B10CFD1A81728F00AA3684 /* ViewController.m in Sources */,
 				55B10CFA1A81728F00AA3684 /* AppDelegate.m in Sources */,
+				FEDD22851B890C7300DAE2CF /* BZTransport.m in Sources */,
 				55B10CF71A81728F00AA3684 /* main.m in Sources */,
+				FEDD22881B890CD700DAE2CF /* BZPacket.m in Sources */,
 				FEDD227D1B89024C00DAE2CF /* NSObject+Serializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
