@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "BZTestObject.h"
 #import "BZDataProcessor.h"
 
 @interface ViewController ()
@@ -18,8 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    BZJSONProcessor *proce = [BZDataProcessor processorWithType:BZJSONDataProcessor];
-    [proce encode: [[BZTestObject alloc] init]];
 }
 
 - (void)didReceiveMemoryWarning {

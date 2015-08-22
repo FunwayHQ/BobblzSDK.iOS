@@ -59,9 +59,7 @@
         NSLog(@"input is nil");
         return nil;
     }
-    NSString *jsonString = [input JSONString];
-    NSLog(@"sda %@", jsonString);
-    return nil;
+    return [input JSONData];
 }
 
 
